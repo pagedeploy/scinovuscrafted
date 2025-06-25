@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta property="og:title" content="Scinovus Crafted" />
+    <meta
+      property="og:description"
+      content="The official website for the Minecraft YouTuber Scinovus Crafted (pronounced sigh-know-vus)."
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/pagedeploy/cdn/blob/main/scinovus/scinovus.png?raw=true"
+    />
+    <meta property="og:url" content="https://pagedeploy.github.io/scinovuscrafted" />
+    <meta property="og:type" content="website" />
+
+    <title>Scinovus Crafted</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="https://github.com/pagedeploy/cdn/blob/main/scinovus/scinovus.png?raw=true"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .w3-sidebar a {
+        font-family: "Montserrat", sans-serif;
+      }
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      .w3-wide {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="w3-content" style="max-width: 1200px">
+    <!-- Sidebar/menu -->
+    <nav
+      class="w3-sidebar w3-bar-block w3-custom w3-collapse w3-top"
+      style="z-index: 3; width: 250px"
+      id="mySidebar"
+    >
+      <div class="w3-container w3-display-container w3-padding-16">
+        <i
+          onclick="w3_close()"
+          class="fa fa-remove w3-hide-large w3-button w3-display-topright"
+        ></i>
+        <a href="#" style="text-decoration: none"
+          ><h3 class="w3-wide"><b>SCINOVUS CRAFTED</b></h3></a
+        >
+      </div>
+      <div
+        class="w3-padding-64 w3-large w3-text-grey"
+        style="font-weight: bold"
+      >
+        <a href="#link" class="w3-bar-item w3-button w3-text-white">Link</a>
+        <a href="#videos" class="w3-bar-item w3-button w3-text-white">Videos</a>
+        <a href="#playlists" class="w3-bar-item w3-button w3-text-white"
+          >Playlists</a
+        >
+        <a href="#alt" class="w3-bar-item w3-button w3-text-white"
+          >Alt Account</a
+        >
+        <a href="#patreon" class="w3-bar-item w3-button w3-text-white"
+          >Patreon</a
+        >
+        <a href="#contact" class="w3-bar-item w3-button w3-text-white"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <style>
+      .w3-custom {
+        color: #000;
+        background-color: #f5291b;
+      }
+    </style>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-custom w3-xlarge">
+      <div class="w3-bar-item w3-padding-24 w3-wide">
+        <b>SCINOVUS CRAFTED</b>
+      </div>
+      <a
+        href="javascript:void(0)"
+        class="w3-bar-item w3-button w3-padding-24 w3-right"
+        onclick="w3_open()"
+        ><i class="fa fa-bars"></i
+      ></a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="w3-overlay w3-hide-large"
+      onclick="w3_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left: 250px">
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top: 83px"></div>
+
+      <!-- Top header -->
+      <header class="w3-container w3-xlarge">
+        <p class="w3-right">
+          <img
+            class="icon"
+            src="https://github.com/pagedeploy/cdn/blob/main/scinovus/youtube.png?raw=true"
+            alt="Icon"
+            width="50"
+          />
+        </p>
+        <p class="w3-left">
+          A Minecraft Youtuber <br />(pronounced sigh-know-vus)
+        </p>
+      </header>
+
+      <!-- Image header -->
+      <div class="w3-display-container w3-container" id="link">
+        <img
+          src="https://github.com/pagedeploy/cdn/blob/main/scinovus/banner.png?raw=true"
+          alt="banner"
+          style="width: 100%"
+        />
+        <p>
+          <a
+            href="https://www.youtube.com/@ScinovusCrafted?sub_confirmation=1"
+            target="_blank"
+            class="w3-button w3-light-gray w3-padding-large w3-large"
+            style="width: 100%"
+            >VIEW CHANNEL ON YOUTUBE</a
+          >
+        </p>
+      </div>
+
+      <div class="w3-container w3-text-red" id="videos">
+        <h4>Videos</h4>
+      </div>
+
+      <div class="w3-row w3-padding-12 w3-margin-left w3-margin-right">
+        <style>
+          .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 60%;
+          }
+          .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        </style>
+        <div class="w3-half">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed?listType=playlist&list=UU-ek3p8pO1Q4HmtZ_09QA2w"
+            ></iframe>
+          </div>
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed?listType=playlist&list=UU-ek3p8pO1Q4HmtZ_09QA2w&index=2"
+            ></iframe>
+          </div>
+        </div>
+        <div class="w3-half">
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed?listType=playlist&list=UU-ek3p8pO1Q4HmtZ_09QA2w&index=3"
+            ></iframe>
+          </div>
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed?listType=playlist&list=UU-ek3p8pO1Q4HmtZ_09QA2w&index=4"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <div class="w3-container w3-text-red" id="playlists">
+        <h4>Playlists</h4>
+      </div>
+      <div
+        class="w3-row w3-padding-12 w3-medium w3-margin-left w3-margin-right"
+      >
+        <div class="w3-half">
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=DW9Gvn6DjKA&list=PLigBZUmckssrraVE0MKKW-3T6edlNlV8k" target="_blank"
+              >Minecraft Logic Be Like:</a
+            ><br />
+            Flaws with Minecraft's logic
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=YXD2ApTe1vg&list=PLigBZUmckssqSB0YD29pJHSwg9ZWpZk8h" target="_blank"
+              >Making Friends in Minecraft:</a
+            ><br />
+            How to be friendly in Minecraft
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=NW1LAI6mlH8&list=PLigBZUmcksspxErA2XS_qRvWwYiZN9vtb" target="_blank"
+              >Minecraft Piston Doors:</a
+            ><br />
+            Tutorials for my piston doors
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=jZsmbswzwuo&list=PLigBZUmckssr7FWmsRRbrT205PaOv2Nax" target="_blank"
+              >Minecraft Amusement Park:</a
+            ><br />
+            Custom amusement park showcase
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=lJNn3uji_oQ&list=PLigBZUmckssrlQ3goHlr9gYt4Vnm6ilYB" target="_blank"
+              >Hermit Brickheadz:</a
+            ><br />
+            LEGO Brickheadz made by Targetstrike
+          </p>
+        </div>
+        <div class="w3-half">
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=FvHRRhN-vaE&list=PLigBZUmcksspROk3FDMl-uw9A9QG6TLJ5" target="_blank"
+              >Scinovus Rickrolls:</a
+            ><br />
+            Different rickrolls I've done to people
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=crgHa--hhd4&list=PLigBZUmcksspKkv8dBtdPIP4Ryc2JiTIo" target="_blank"
+              >Dulles Airport in Minecraft:</a
+            ><br />
+            Dulles Airport recreation showcase
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=hjxBPjmkHpk&list=PLigBZUmckssrKI8IOmKpKzHiSAOLFXb-F" target="_blank"
+              >Minecraft Recreations:</a
+            ><br />
+            Ancient wonder recreations showcase
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=6k4idES-DUo&list=PLigBZUmckssosixWNs-m_3jiGsvp6Gncd" target="_blank"
+              >Minecraft Resource Packs:</a
+            ><br />
+            Custom resource packs I designed
+          </p>
+          <p>
+            <a
+              href="https://www.youtube.com/watch?v=KL1dDa_t0FY&list=PLigBZUmckssqfKIt8qSyRxchCKmKQaoMI" target="_blank"
+              >Minecraft Holiday Stuff:</a
+            ><br />
+            Holiday-themed Minecraft builds
+          </p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-text-red" id="alt">
+        <h4>Alt Account</h4>
+      </div>
+      <div
+        class="w3-row w3-padding-12 w3-medium w3-margin-left w3-margin-right"
+      >
+        <div class="w3-col m6">
+          <img
+            class="icon"
+            src="https://github.com/pagedeploy/cdn/blob/main/scinovus/skinovus.jpg?raw=true"
+            alt="Icon"
+            width="16"
+          />
+          Channel:
+          <a href="https://www.youtube.com/@SkinovusCoded?sub_confirmation=1" target="_blank"
+            >youtube.com/@skinovuscoded</a
+          >
+        </div>
+        <div class="w3-col w3-justify">
+          <p>
+            I post mostly non-Minecraft content on this channel, with a fair bit
+            of airplane videos, but also some dog content, and a few highlights
+            from concerts I've attended.
+          </p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-text-red" id="patreon">
+        <h4>Patreon</h4>
+      </div>
+      <div
+        class="w3-row w3-padding-12 w3-medium w3-margin-left w3-margin-right"
+      >
+        <div class="w3-col m6">
+          <img
+            class="icon"
+            src="https://www.svgrepo.com/show/349471/patreon.svg"
+            alt="Icon"
+            width="16"
+          />
+          Link:
+          <a href="https://www.patreon.com/scinovuscrafted" target="_blank"
+            >patreon.com/scinovuscrafted</a
+          >
+        </div>
+        <div class="w3-col w3-justify">
+          <p>
+            Join my Patreon community to help me out as a small content creator,
+            get unique benefits such as world and resource pack downloads, and a
+            special role in my Discord server! Note: No longer available.
+          </p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-text-red" id="contact">
+        <h4>Contact</h4>
+      </div>
+      <div
+        class="w3-row w3-padding-12 w3-medium w3-margin-left w3-margin-right"
+      >
+        <div class="w3-col m6">
+          <img
+            class="icon"
+            src="https://www.svgrepo.com/show/349378/gmail.svg"
+            alt="Icon"
+            width="20"
+          />
+          Email:
+          <a href="mailto:scinovuscrafted@gmail.com?subject=Contact_via_Website" target="_blank"
+            >scinovuscrafted@gmail.com</a
+          >
+          <br />
+          <img
+            class="icon"
+            src="https://www.svgrepo.com/show/349338/discord.svg"
+            alt="Icon"
+            width="20"
+          />
+          Discord:
+          <a href="https://discord.com/users/575795042933932071" target="_blank"
+            >scinovuscrafted</a
+          >
+        </div>
+        <div class="w3-col w3-justify">
+          <p>
+            Feel free to contact me for any questions, comments, or suggestions.
+            I try to respond to every email or DM I get.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer
+        class="w3-container w3-padding-12 w3-center w3-light-gray w3-xlarge w3-center"
+        id="footer"
+      >
+        <p class="w3-medium">
+          © 2023-2025 Scinovus Crafted
+          <a href="https://bit.ly/3MEvBVv" target="_blank">Privacy Policy</a>
+        </p>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      // Accordion
+      function myAccFunc() {
+        var x = document.getElementById("demoAcc");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // Open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
