@@ -46,8 +46,16 @@
       }
     </style>
   </head>
-  <body class="w3-content" style="max-width: 1200px">
-    <!-- Sidebar/menu -->
+  <body style="display: flex; flex-direction: column; min-height: 100vh; margin: 0 auto; max-width: 1200px;">
+    <style>
+      .wrapper {
+        flex: 1 0 auto;
+      }
+      .footer-sticky {
+        flex-shrink: 0;
+        margin-left: 250px;
+      }
+    </style>
     <nav
       class="w3-sidebar w3-bar-block w3-custom w3-collapse w3-top"
       style="z-index: 3; width: 250px"
@@ -83,7 +91,6 @@
       }
     </style>
 
-    <!-- Top menu on small screens -->
     <header class="w3-bar w3-top w3-hide-large w3-custom w3-xlarge">
       <div class="w3-bar-item w3-padding-24 w3-wide">
         <b>SCINOVUS CRAFTED</b>
@@ -96,7 +103,6 @@
       ></a>
     </header>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
     <div
       class="w3-overlay w3-hide-large"
       onclick="w3_close()"
@@ -105,12 +111,9 @@
       id="myOverlay"
     ></div>
 
-    <!-- !PAGE CONTENT! -->
-    <div class="w3-main" style="margin-left: 250px">
-      <!-- Push down content on small screens -->
+    <div class="wrapper w3-main" style="margin-left: 250px">
       <div class="w3-hide-large" style="margin-top: 83px"></div>
 
-      <!-- Top header -->
       <header class="w3-container w3-xlarge">
         <p class="w3-right">
           <img
@@ -125,7 +128,6 @@
         </p>
       </header>
 
-      <!-- Image header -->
       <div class="w3-display-container w3-container" id="link">
         <img
           src="https://github.com/pagedeploy/cdn/blob/main/scinovus/banner.png?raw=true"
@@ -207,82 +209,32 @@
       </div>
       <div
         class="w3-row w3-padding-12 w3-medium w3-margin-left w3-margin-right"
-      >
-        <div class="w3-half">
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=DW9Gvn6DjKA&list=PLigBZUmckssrraVE0MKKW-3T6edlNlV8k" target="_blank"
-              >Minecraft Logic Be Like:</a
-            ><br />
-            Flaws with Minecraft's logic
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=YXD2ApTe1vg&list=PLigBZUmckssqSB0YD29pJHSwg9ZWpZk8h" target="_blank"
-              >Making Friends in Minecraft:</a
-            ><br />
-            How to be friendly in Minecraft
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=NW1LAI6mlH8&list=PLigBZUmcksspxErA2XS_qRvWwYiZN9vtb" target="_blank"
-              >Minecraft Piston Doors:</a
-            ><br />
-            Tutorials for my piston doors
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=jZsmbswzwuo&list=PLigBZUmckssr7FWmsRRbrT205PaOv2Nax" target="_blank"
-              >Minecraft Amusement Park:</a
-            ><br />
-            Custom amusement park showcase
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=lJNn3uji_oQ&list=PLigBZUmckssrlQ3goHlr9gYt4Vnm6ilYB" target="_blank"
-              >Hermit Brickheadz:</a
-            ><br />
-            LEGO Brickheadz made by Targetstrike
-          </p>
-        </div>
-        <div class="w3-half">
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=FvHRRhN-vaE&list=PLigBZUmcksspROk3FDMl-uw9A9QG6TLJ5" target="_blank"
-              >Scinovus Rickrolls:</a
-            ><br />
-            Different rickrolls I've done to people
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=crgHa--hhd4&list=PLigBZUmcksspKkv8dBtdPIP4Ryc2JiTIo" target="_blank"
-              >Dulles Airport in Minecraft:</a
-            ><br />
-            Dulles Airport recreation showcase
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=hjxBPjmkHpk&list=PLigBZUmckssrKI8IOmKpKzHiSAOLFXb-F" target="_blank"
-              >Minecraft Recreations:</a
-            ><br />
-            Ancient wonder recreations showcase
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=6k4idES-DUo&list=PLigBZUmckssosixWNs-m_3jiGsvp6Gncd" target="_blank"
-              >Minecraft Resource Packs:</a
-            ><br />
-            Custom resource packs I designed
-          </p>
-          <p>
-            <a
-              href="https://www.youtube.com/watch?v=KL1dDa_t0FY&list=PLigBZUmckssqfKIt8qSyRxchCKmKQaoMI" target="_blank"
-              >Minecraft Holiday Stuff:</a
-            ><br />
-            Holiday-themed Minecraft builds
-          </p>
-        </div>
-      </div>
+        id="playlistList"
+      ></div>
+      <script>
+        const playlists = [
+          {title: "Minecraft Logic Be Like:", desc: "Flaws with Minecraft's logic", url: "https://www.youtube.com/watch?v=DW9Gvn6DjKA&list=PLigBZUmckssrraVE0MKKW-3T6edlNlV8k"},
+          {title: "Making Friends in Minecraft:", desc: "How to be friendly in Minecraft", url: "https://www.youtube.com/watch?v=YXD2ApTe1vg&list=PLigBZUmckssqSB0YD29pJHSwg9ZWpZk8h"},
+          {title: "Minecraft Piston Doors:", desc: "Tutorials for my piston doors", url: "https://www.youtube.com/watch?v=NW1LAI6mlH8&list=PLigBZUmcksspxErA2XS_qRvWwYiZN9vtb"},
+          {title: "Minecraft Amusement Park:", desc: "Custom amusement park showcase", url: "https://www.youtube.com/watch?v=jZsmbswzwuo&list=PLigBZUmckssr7FWmsRRbrT205PaOv2Nax"},
+          {title: "Hermit Brickheadz:", desc: "LEGO Brickheadz made by Targetstrike", url: "https://www.youtube.com/watch?v=lJNn3uji_oQ&list=PLigBZUmckssrlQ3goHlr9gYt4Vnm6ilYB"},
+          {title: "Scinovus Rickrolls:", desc: "Different rickrolls I've done to people", url: "https://www.youtube.com/watch?v=FvHRRhN-vaE&list=PLigBZUmcksspROk3FDMl-uw9A9QG6TLJ5"},
+          {title: "Dulles Airport in Minecraft:", desc: "Dulles Airport recreation showcase", url: "https://www.youtube.com/watch?v=crgHa--hhd4&list=PLigBZUmcksspKkv8dBtdPIP4Ryc2JiTIo"},
+          {title: "Minecraft Recreations:", desc: "Ancient wonder recreations showcase", url: "https://www.youtube.com/watch?v=hjxBPjmkHpk&list=PLigBZUmckssrKI8IOmKpKzHiSAOLFXb-F"},
+          {title: "Minecraft Resource Packs:", desc: "Custom resource packs I designed", url: "https://www.youtube.com/watch?v=6k4idES-DUo&list=PLigBZUmckssosixWNs-m_3jiGsvp6Gncd"},
+          {title: "Minecraft Holiday Stuff:", desc: "Holiday-themed Minecraft builds", url: "https://www.youtube.com/watch?v=KL1dDa_t0FY&list=PLigBZUmckssqfKIt8qSyRxchCKmKQaoMI"}
+        ];
+        let html = '';
+        for (let i = 0; i < playlists.length; i += 2) {
+          html += `<div class="w3-half">`;
+          html += `<p><a href="${playlists[i].url}" target="_blank">${playlists[i].title}</a><br />${playlists[i].desc}</p>`;
+          if (i + 1 < playlists.length) {
+            html += `<p><a href="${playlists[i+1].url}" target="_blank">${playlists[i+1].title}</a><br />${playlists[i+1].desc}</p>`;
+          }
+          html += `</div>`;
+        }
+        document.getElementById('playlistList').innerHTML = html;
+      </script>
 
       <div class="w3-container w3-text-red" id="alt">
         <h4>Alt Account</h4>
@@ -373,22 +325,17 @@
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer
-        class="w3-container w3-padding-12 w3-center w3-light-gray w3-xlarge w3-center"
-        id="footer"
-      >
-        <p class="w3-medium">
-          © 2023-2025 Scinovus Crafted
-          <a href="https://bit.ly/3MEvBVv" target="_blank">Privacy Policy</a>
-        </p>
-      </footer>
-
-      <!-- End page content -->
+      </div>
     </div>
 
+    <footer class="footer-sticky w3-container w3-padding-12 w3-center w3-light-gray w3-small">
+      <p>
+        © 2023-2026 Scinovus Crafted
+        <a href="https://bit.ly/3MEvBVv" target="_blank">Privacy Policy</a>
+      </p>
+    </footer>
+
     <script>
-      // Accordion
       function myAccFunc() {
         var x = document.getElementById("demoAcc");
         if (x.className.indexOf("w3-show") == -1) {
@@ -398,7 +345,6 @@
         }
       }
 
-      // Open and close sidebar
       function w3_open() {
         document.getElementById("mySidebar").style.display = "block";
         document.getElementById("myOverlay").style.display = "block";
