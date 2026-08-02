@@ -224,12 +224,12 @@
           {title: "Minecraft Resource Packs:", desc: "Custom resource packs I designed", url: "https://www.youtube.com/watch?v=6k4idES-DUo&list=PLigBZUmckssosixWNs-m_3jiGsvp6Gncd"},
           {title: "Minecraft Holiday Stuff:", desc: "Holiday-themed Minecraft builds", url: "https://www.youtube.com/watch?v=KL1dDa_t0FY&list=PLigBZUmckssqfKIt8qSyRxchCKmKQaoMI"}
         ];
+        const perColumn = Math.ceil(playlists.length / 2);
         let html = '';
-        for (let i = 0; i < playlists.length; i += 2) {
+        for (let start = 0; start < playlists.length; start += perColumn) {
           html += `<div class="w3-half">`;
-          html += `<p><a href="${playlists[i].url}" target="_blank">${playlists[i].title}</a><br />${playlists[i].desc}</p>`;
-          if (i + 1 < playlists.length) {
-            html += `<p><a href="${playlists[i+1].url}" target="_blank">${playlists[i+1].title}</a><br />${playlists[i+1].desc}</p>`;
+          for (const p of playlists.slice(start, start + perColumn)) {
+            html += `<p><a href="${p.url}" target="_blank">${p.title}</a><br />${p.desc}</p>`;
           }
           html += `</div>`;
         }
@@ -256,7 +256,7 @@
         </div>
         <div class="w3-col w3-justify">
           <p>
-            Whereas my main channel is Minecraft focused, this channel is basically videos from my camera role. The content consists of airplanes, animals, transit, technology, and more. This channel was revived in mid-2025, and a new video is scheduled to come out every Friday at 3pm EST for the foreseeable future.  
+            Whereas my main channel is Minecraft focused, this channel is basically videos from my camera roll. The content consists of airplanes, animals, transit, technology, and more. This channel was revived in mid-2025, and a new video is scheduled to come out every Friday at 3pm EST for the foreseeable future.  
           </p>
         </div>
       </div>
